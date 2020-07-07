@@ -1,0 +1,22 @@
+#+TITLE: SKI in asm
+A interpreter for extended SKI combinators (including C, B, S', C', B* plus for
+Z (zero) and U (succ) for church numerals).
+* How to use
+Each combinator is represented by a number from 0 to 9, any other number is an application.
+| Number | Combinator |
+|--------+------------|
+|      0 | S          |
+|      1 | K          |
+|      2 | U          |
+|      3 | Z          |
+|      4 | I          |
+|      5 | B          |
+|      6 | C          |
+|      7 | S'         |
+|      8 | B*         |
+|      9 | C'         |
+To create a program you need to lists, the stack which represents the program
+and the nodelist which is list of internal nodes (application). The nodelist
+consist of a list of pair of two values, they can be combinators or other
+internal nodes. An internal node is described by a number n superior to ten.
+It is the application of nodelist[n - 10] and nodelist[n - 9].
