@@ -26,4 +26,6 @@ be compiled as: stack = [3, 2] (note, the stack list has to be in reverse order)
 and nodelist = [] or stack = [10] and nodelist = [2, 3]. To create a file with
 that does that you can use the script src/ski.sh. You can invoke it by giving it
 as an argument the name of a file which contains 2 lines, the stack and the
-nodelist.
+nodelist. It will produce a binary called a.out that when executed is going to
+return a church numeral in the exit status (you can see it by using ~echo $?~
+just after executing the program).

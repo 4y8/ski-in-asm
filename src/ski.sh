@@ -30,4 +30,6 @@ mov  %rax, %rbx
 mov  \$1, %rax
 int  \$0x80"
 echo "$prog" |
-cat - main.s
+    cat - main.s |
+    as - -o a.o
+ld a.o
