@@ -18,5 +18,10 @@ Each combinator is represented by a number from 0 to 9, any other number is an a
 To create a program you need to lists, the stack which represents the program
 and the nodelist which is list of internal nodes (application). The nodelist
 consist of a list of pair of two values, they can be combinators or other
-internal nodes. An internal node is described by a number n superior to ten.
-It is the application of nodelist[n - 10] and nodelist[n - 9].
+internal nodes. An internal node is described by a number n superior to ten. It
+is the application of nodelist[n - 10] and nodelist[n - 9]. For instance, UZ can
+be compiled as: stack = [3, 2] (note, the stack list has to be in reverse order)
+and nodelist = [] or stack = [10] and nodelist = [2, 3]. To create a file with
+that does that you can use the script src/ski.sh. You can invoke it by giving it
+as an argument the name of a file which contains 2 lines, the stack and the
+nodelist.
