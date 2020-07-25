@@ -26,9 +26,9 @@ prog="$prog
 movq \$0, nadds
 movq \$$loop, nodelen
 call run
-mov  %rax, %rbx
-mov  \$1, %rax
-int  \$0x80"
+mov  %rax, %rdi
+mov  \$60, %rax
+syscall"
 echo "$prog" |
     cat - main.s |
     as - -o a.o
